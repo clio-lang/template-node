@@ -19,3 +19,17 @@ test = "No tests specified"
 
 [dependencies]
 stdlib = "latest"
+
+[[servers]]
+proto = "wt"
+name = "default"
+
+[[workers]]
+proto = "wt"
+count = "cpu"
+server = "default"
+
+[executor]
+proto = "wt"
+wait_for = "cpu"
+server = "default"
