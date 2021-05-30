@@ -32,18 +32,6 @@ server = "default"
 
 # Npm specific configs
 
-[npm]
-browserlist = ["> 0.2%", "not dead"]
-main = "index.html"
-
-[npm.alias]
-ws = "clio-rpc/transports/ws/shim.js"
-"main.clio.js" = "./main.clio.js"
-
-[npm.devDependencies]
-parcel = "next"
-
 [npm.scripts]
-start = "parcel index.html"
+start = "node .clio/index.js"
 host = "node .clio/host.js"
-build = "parcel build index.html"
